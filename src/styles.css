@@ -1,1 +1,237 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/css/color-pallette.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root {
+  --primary_1: rgba(155, 188, 255, 0.81);
+  --primary_2: #61aefa;
+  --primary_3: #005bb9;
+
+  --secondary_1: #d2fdf2;
+  --secondary_2: #71fad5;
+  --secondary_3: #00b978;
+}
+.font .poppins{
+  font-family: 'Poppins', sans-serif !important;
+}
+.bg_primary_1{
+  background-color: var(--primary_1) !important;
+}
+.bg_primary_2{
+  background-color: var(--primary_2) !important;
+}
+.bg_primary_3{
+  background-color: var(--primary_3) !important;
+}
+.bg_secondary_1{
+  background-color: var(--secondary_1) !important;
+}
+.bg_secondary_2{
+  background-color: var(--secondary_2) !important;
+}
+.bg_secondary_3{
+  background-color: var(--secondary_3) !important;
+}
+.text_primary_1{
+  color: var(--primary_1) !important;
+}
+.text_primary_2{
+  color: var(--primary_2) !important;
+}
+.text_primary_3{
+  color: var(--primary_3) !important;
+}
+.text_secondary_1{
+  color: var(--secondary_1) !important;
+}
+.text_secondary_2{
+  color: var(--secondary_2) !important;
+}
+.text_secondary_3{
+  color: var(--secondary_3) !important;
+}
+.sdl-brand-name-decor{
+  text-shadow: 5px 5px 5px var(--secondary_1);
+  font-weight: 700;
+}
+#navbarId {
+  transition: 0.5s;
+}
+html {
+  height: 100%;
+}
+/*Number input*/
+.number-input input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.number-input input[type=number]::-webkit-inner-spin-button,
+.number-input input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number-input {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.number-input button {
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+}
+
+.number-input button:before,
+.number-input button:after {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  height: 2px;
+  transform: translate(-50%, -50%);
+}
+
+.number-input button.plus:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-input input[type=number] {
+  text-align: center;
+}
+
+.number-input.number-input {
+  border: 1px solid #ced4da;
+  width: 10rem;
+  border-radius: .25rem;
+}
+
+.number-input.number-input button {
+  width: 2.6rem;
+  height: .7rem;
+}
+
+.number-input.number-input button.minus {
+  padding-left: 10px;
+}
+
+.number-input.number-input button:before,
+.number-input.number-input button:after {
+  width: .7rem;
+  background-color: #495057;
+}
+
+.number-input.number-input input[type=number] {
+  max-width: 4rem;
+  padding: .5rem;
+  border: 1px solid #ced4da;
+  border-width: 0 1px;
+  font-size: 1rem;
+  height: 2rem;
+  color: #495057;
+}
+
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color:transparent) {
+
+    .number-input.def-number-input.safari_only button:before,
+    .number-input.def-number-input.safari_only button:after {
+      margin-top: -.3rem;
+    }
+  }
+}
+/*Number Input*/
+
+body {
+  color: #10847e !important;
+  background-color: rgba(241, 239, 239, 0.47);
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+.wow {
+  visibility: hidden;
+}
+.btn {
+  font-size: large;
+  font-weight: 700;
+}
+label {
+  font-weight: bolder;
+}
+
+.h-scrollable {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.waves-effect.waves-red .waves-ripple {
+  background-color: #f97786;
+}
+.waves-effect.waves-blue .waves-ripple {
+  background-color: #7798f9;
+}
+.noselect {
+  pointer-events: none;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}
+
+@media (min-width: 991.98px) {
+  main {
+    padding-left: 240px;
+  }
+}
+
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+nav .nav-icons{
+  height: 24px;
+  width: 24px;
+}
+
+.theme-text-1{
+  color: #0275d8 !important;
+}

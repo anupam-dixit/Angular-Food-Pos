@@ -1,0 +1,141 @@
+<!-- Sidebar navigation -->
+<div id="slide-out" class="side-nav fixed mdb-sidenav">
+  <ul class="custom-scrollbar list-unstyled" style="max-height:100vh;">
+    <!-- Logo -->
+    <li>
+      <div class="logo-wrapper waves-light text-center">
+        <img class="img-fluid" src="https://cdn.jsdelivr.net/gh/anupam-dixit/web/files/images/logo.webp">
+      </div>
+    </li>
+    <!--/. Logo -->
+    <!--Social-->
+    <li>
+      <ul class="social">
+        <li><a href="#" class="icons-sm fb-ic"><i class="fab fa-facebook-f"> </i></a></li>
+        <li><a href="#" class="icons-sm pin-ic"><i class="fab fa-pinterest"> </i></a></li>
+        <li><a href="#" class="icons-sm gplus-ic"><i class="fab fa-google-plus-g"> </i></a></li>
+        <li><a href="#" class="icons-sm tw-ic"><i class="fab fa-twitter"> </i></a></li>
+      </ul>
+    </li>
+    <!--/Social-->
+    <!--Search Form-->
+    <li>
+      <form class="search-form" role="search">
+        <div class="form-group md-form mt-0 pt-1 waves-light">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      </form>
+    </li>
+    <!--/.Search Form-->
+    <!-- Side navigation links -->
+    <li>
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a routerLink="panel/dashboard" class="waves-effect" [ngClass]="{'active' : this.router.url.includes('panel/dashboard')}">
+            <i class="fa-solid fa-house mr-1"></i>
+            Dashboard
+          </a>
+        </li>
+        <!--        Admin-->
+        <li>
+          <a class="collapsible-header waves-effect arrow-r" [ngClass]="{'active' : this.router.url.includes('panel/access-management')}"><i class="fas fa-users-gear"></i>Access Management<i class="fas fa-angle-down rotate-icon"></i></a>
+          <div class="collapsible-body">
+            <ul>
+              <li>
+                <a routerLink="panel/access-management/role" class="waves-effect" [ngClass]="{'active' : this.router.url.includes('access-management/role')}">
+                  <i class="fa-solid fa-user-shield mr-1"></i>
+                  Roles
+                </a>
+              </li>
+              <li>
+                <a routerLink="panel/access-management/permission" class="waves-effect" [ngClass]="{'active' : this.router.url.includes('access-management/permission')}">
+                  <i class="fa-solid fa-user-tag mr-1"></i>
+                  Permissions
+                </a>
+              </li>
+              <li>
+                <a [href]="['panel/user/list']" class="waves-effect" [ngClass]="{'active' : this.router.url.includes('user/list')}">
+                  <i class="fa-solid fa-list mr-1"></i>
+                  List
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="collapsible-header waves-effect arrow-r" [ngClass]="{'active' : this.router.url.includes('user')}"><i class="fas fa-user"></i>Users<i class="fas fa-angle-down rotate-icon"></i></a>
+          <div class="collapsible-body">
+            <ul>
+              <li>
+                <a [href]="['panel/user/create']" class="waves-effect" [ngClass]="{'active' : this.router.url.includes('user/create')}">
+                  <i class="fa-solid fa-plus mr-1"></i>
+                  Create
+                </a>
+              </li>
+              <li>
+                <a [href]="['panel/user/list']" class="waves-effect" [ngClass]="{'active' : this.router.url.includes('user/list')}">
+                  <i class="fa-solid fa-list mr-1"></i>
+                  List
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="collapsible-header waves-effect arrow-r" [ngClass]="{'active' : this.router.url.includes('/category/')}"><i class="fas fa-object-union"></i>Category<i class="fas fa-angle-down rotate-icon"></i></a>
+          <div class="collapsible-body">
+            <ul>
+              <li>
+                <a routerLink="panel/category/list" class="waves-effect" [ngClass]="{'active' : this.router.url.includes('/category/list')}">
+                  <i class="fa-solid fa-list mr-1"></i>
+                  List
+                </a>
+              </li>
+              <li>
+                <a routerLink="panel/category/create" class="waves-effect" [ngClass]="{'active' : this.router.url.includes('/category/create')}">
+                  <i class="fa-solid fa-plus mr-1"></i>
+                  Create
+                </a>
+              </li>
+              <li>
+                <a routerLink="panel/category/edit" class="waves-effect" [ngClass]="{'active' : this.router.url.includes('/category/edit')}">
+                  <i class="fa-solid fa-pencil mr-1"></i>
+                  Edit
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a class="collapsible-header waves-effect arrow-r" [ngClass]="{'active' : this.router.url.includes('/sub-category/')}"><i class="fas fa-object-union"></i>Sub Category<i class="fas fa-angle-down rotate-icon"></i></a>
+          <div class="collapsible-body">
+            <ul>
+              <li>
+                <a routerLink="panel/sub-category/list" class="waves-effect" [ngClass]="{'active' : this.router.url.includes('/sub-category/list')}">
+                  <i class="fa-solid fa-list mr-1"></i>
+                  List
+                </a>
+              </li>
+              <li>
+                <a routerLink="panel/sub-category/create" class="waves-effect" [ngClass]="{'active' : this.router.url.includes('/sub-category/create')}">
+                  <i class="fa-solid fa-plus mr-1"></i>
+                  Create
+                </a>
+              </li>
+              <li>
+                <a routerLink="panel/sub-category/edit" class="waves-effect" [ngClass]="{'active' : this.router.url.includes('/sub-category/edit')}">
+                  <i class="fa-solid fa-pencil mr-1"></i>
+                  Edit
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <!--/. Side navigation links -->
+  </ul>
+  <div class="sidenav-bg mask-strong"></div>
+</div>
+<!--/. Sidebar navigation -->

@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col">
+    <div class="card shadow">
+      <div class="card-header h3-responsive">
+        List Categories
+      </div>
+      <div class="card-body p-3">
+        <div class="table-responsive">
+          <table id="myDataTable" class="table" style="width:100%">
+            <thead>
+            <tr>
+              <th class="h5-responsive font-weight-bolder">Title</th>
+              <th class="h5-responsive font-weight-bolder">Code</th>
+              <th class="h5-responsive font-weight-bolder">Created At</th>
+              <th class="h5-responsive font-weight-bolder">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Table body content will be populated by DataTables -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade top" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true" data-backdrop="true">
+  <div class="modal-dialog modal-frame modal-top modal-notify modal-danger" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row d-flex justify-content-center align-items-center">
+          <p class="pt-3 pr-2">Are you sure to delete?</p>
+          <button type="button" class="btn btn-md btn-outline-primary rounded waves-effect" data-dismiss="modal"><i
+            class="fa-solid fa-arrow-left-long mr-1"></i> Cancel
+          </button>
+          <button (click)="delete()" class="btn btn-md btn-danger rounded waves-effect"
+                  [ngClass]="{'disabled' : loading_delete_category}">
+            <span *ngIf="!loading_delete_category">Delete <i
+              class="fa-solid fa-trash ml-1"></i></span>
+            <span *ngIf="loading_delete_category">
+                    Loading<i class='fas ml-2 fa-spinner fa-pulse fa-lg bold'></i>
+                  </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
