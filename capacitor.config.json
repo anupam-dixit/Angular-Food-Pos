@@ -1,0 +1,11 @@
+{
+  "appId": "sdl.food.pos",
+  "appName": "Food POS",
+  "bundledWebRuntime": false,
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}
