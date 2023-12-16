@@ -55,7 +55,7 @@ export const MyLib={
   },
 
   Notification:{
-    show:function (type:String='warning',title:String='Message',message:String='Unable to perform this action',timer:number=3000):void{
+    show:function (type:String='warning',title:String|null='Message',message:String='Unable to perform this action',timer:number=3000):void{
       MyLib.Sound.play((type==='success')?1:0)
       return cuteToast({
         title:title,

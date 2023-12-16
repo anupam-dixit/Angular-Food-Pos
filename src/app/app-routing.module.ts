@@ -17,11 +17,9 @@ import {AccessManagementComponent} from "./components/access-management/access-m
 import {CreateRoleComponent} from "./components/access-management/role/create-role/create-role.component";
 import {UpdateRoleComponent} from "./components/access-management/role/update-role/update-role.component";
 import {ListRoleComponent} from "./components/access-management/role/list-role/list-role.component";
-import {RoleComponent} from "./components/access-management/role/role/role.component";
 import {PermissionComponent} from "./components/access-management/permission/permission.component";
-import {
-  ListPermissionComponent
-} from "./components/access-management/permission/list-permission/list-permission.component";
+import {ListPermissionComponent} from "./components/access-management/permission/list-permission/list-permission.component";
+import {RoleComponent} from "./components/access-management/role/role.component";
 
 const routes: Routes = [
   {path:"login",component:LoginComponent,canActivate:[ensureNotLoggedInGuard], title: 'Login',},
@@ -46,6 +44,7 @@ const routes: Routes = [
   {
     path:"panel/access-management/role",component:RoleComponent,canActivate:[ensureLoggedInGuard],
     children:[
+      {path: '', component: ListRoleComponent,title: 'Role List'},
       {path: 'list', component: ListRoleComponent,title: 'Role List'},
       {path: 'create', component: CreateRoleComponent,title: 'Role Create'},
       {path: 'edit/:id', component: UpdateRoleComponent,title: 'Role Update'},

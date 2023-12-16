@@ -1,7 +1,0 @@
-{
-  "name": "Food Pos",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
-}

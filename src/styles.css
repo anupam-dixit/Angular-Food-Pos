@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "assets/css/color-pallette.css";
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@500&display=swap');
 :root {
   --primary_1: rgba(155, 188, 255, 0.81);
   --primary_2: #61aefa;
@@ -10,8 +10,14 @@
   --secondary_2: #71fad5;
   --secondary_3: #00b978;
 }
+body{
+  font-family: 'Raleway', sans-serif !important;
+}
 .font .poppins{
   font-family: 'Poppins', sans-serif !important;
+}
+.font .raleway{
+  font-family: 'Raleway', sans-serif !important;
 }
 .bg_primary_1{
   background-color: var(--primary_1) !important;

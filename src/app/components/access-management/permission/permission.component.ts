@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import {Endpoints} from "../../../../../../Helpers/Endpoints";
 import {Router} from "@angular/router";
+import {Endpoints} from "../../../../../Helpers/Endpoints";
+import {MyLib} from "../../../../../Helpers/MyLib";
 declare var $: any;
-
 @Component({
-  selector: 'app-list-role',
-  templateUrl: './list-role.component.html',
-  styleUrls: ['./list-role.component.css']
+  selector: 'app-permission',
+  templateUrl: './permission.component.html',
+  styleUrls: ['./permission.component.css']
 })
-export class ListRoleComponent {
+export class PermissionComponent {
   loading_delete_permission: boolean=false;
   dt:any
   private target_id: String='';
@@ -18,20 +18,11 @@ export class ListRoleComponent {
     this.dt=$('#myDataTable').DataTable({
       serverSide: true,
       processing: true,
-      ajax: Endpoints.Role.Dtlist,
+      ajax: Endpoints.Permission.Dtlist,
       columns: [
         { data: 'title' },
         { data: 'code' },
         { data: 'description' },
-        {
-          data: 'id',
-          title: 'Action',
-          render: function (data:any, type:any, row:any) {
-            return `
-                <a action="ref" target="${data}" class="btn-floating btn-sm btn-warning"><i class="fas fa-pencil"></i></a>
-                <a action="del" target="${data}" class="btn-floating btn-sm btn-danger"><i class="fas fa-trash"></i></a>`
-          },
-        }
       ]
     });
   }
@@ -53,6 +44,4 @@ export class ListRoleComponent {
       context.target_id=''
     });
   }
-
-
 }

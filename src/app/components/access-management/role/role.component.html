@@ -1,0 +1,28 @@
+<section class="pb-3">
+  <!-- Classic tabs -->
+  <div class="classic-tabs mx-2" bis_skin_checked="1">
+
+    <ul class="nav card-header" id="myClassicTabOrange" role="tablist">
+      <li class="nav-item">
+        <a routerLink='list' class="nav-link waves-light show waves-effect waves-light" [ngClass]="{'active' : this.router.url.includes('access-management/role/')}" id="profile-tab-classic-orange" data-toggle="tab" href="#profile-classic-orange" role="tab" aria-controls="profile-classic-orange" aria-selected="false" bis_skin_checked="1">
+          <i class="fas fa-list fa-2x pb-2" aria-hidden="true"></i>
+          <br>
+          List
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="create" class="nav-link waves-light waves-effect waves-light" id="follow-tab-classic-orange" data-toggle="tab" href="#follow-classic-orange" role="tab" aria-controls="follow-classic-orange" aria-selected="false" bis_skin_checked="1">
+          <i class="fas fa-plus fa-2x pb-2" aria-hidden="true"></i>
+          <br>
+          Create
+        </a>
+      </li>
+
+    </ul>
+    <div class="tab-content card" id="myClassicTabContentOrange" bis_skin_checked="1">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+  <!-- Classic tabs -->
+</section>

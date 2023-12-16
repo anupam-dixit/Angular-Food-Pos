@@ -1,6 +1,6 @@
-const ENDPOINT= 'http://localhost:3000/'
+const ENDPOINT= 'http://15.235.163.157:3000/'
 export const Endpoints={
-  ENDPOINT: 'http://localhost:3000/',
+  ENDPOINT: 'http://15.235.163.157:3000/',
   User:{
     Login:ENDPOINT+'users/login'
   },
@@ -22,4 +22,12 @@ export const Endpoints={
     Update:ENDPOINT+'sub-category/update',
     Delete:ENDPOINT+'sub-category/delete'
   },
+  Permission: {
+    Dtlist:ENDPOINT+'permission/dt',
+    List:ENDPOINT+'permission',
+  },
+  Role: {
+    Dtlist:ENDPOINT+'role/dt',
+    Create:ENDPOINT+'role/create',
+  }
 }

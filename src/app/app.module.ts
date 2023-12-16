@@ -22,9 +22,9 @@ import { AccessManagementComponent } from './components/access-management/access
 import { CreateRoleComponent } from './components/access-management/role/create-role/create-role.component';
 import { UpdateRoleComponent } from './components/access-management/role/update-role/update-role.component';
 import { ListRoleComponent } from './components/access-management/role/list-role/list-role.component';
-import { RoleComponent } from './components/access-management/role/role/role.component';
 import { ListPermissionComponent } from './components/access-management/permission/list-permission/list-permission.component';
 import { PermissionComponent } from './components/access-management/permission/permission.component';
+import {RoleComponent} from "./components/access-management/role/role.component";
 
 @NgModule({
   declarations: [
@@ -46,8 +46,8 @@ import { PermissionComponent } from './components/access-management/permission/p
     CreateRoleComponent,
     UpdateRoleComponent,
     ListRoleComponent,
-    RoleComponent,
     ListPermissionComponent,
+    RoleComponent,
     PermissionComponent,
   ],
   imports: [

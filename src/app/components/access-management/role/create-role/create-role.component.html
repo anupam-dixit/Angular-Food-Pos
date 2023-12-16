@@ -1,1 +1,33 @@
-<p>create-role works!</p>
+<form [formGroup]="createForm" (submit)="create()">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+          <div class="md-form md-outline input-with-pre-icon">
+            <i class="fas text-primary fa-tag input-prefix"></i>
+            <input id="title" name="title" formControlName="title" class="form-control font-weight-bolder"
+                   type="text">
+            <label for="title">Title</label>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+          <div class="md-form md-outline">
+            <textarea formControlName="description" id="field_description" class="md-textarea form-control" rows="2"></textarea>
+            <label for="field_description">Description</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-right">
+      <button type="submit" class="btn btn-md rounded btn-primary"
+              [ngClass]="{'disabled' : loading_add_data}">
+        <span *ngIf="!loading_add_data">Submit</span>
+        <span *ngIf="loading_add_data">
+                Loading<i class='fas ml-2 fa-spinner fa-pulse fa-lg bold'></i>
+              </span>
+      </button>
+    </div>
+  </div>
+</form>
